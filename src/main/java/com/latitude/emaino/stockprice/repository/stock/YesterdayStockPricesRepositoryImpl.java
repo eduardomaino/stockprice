@@ -1,5 +1,7 @@
 package com.latitude.emaino.stockprice.repository.stock;
 
+import org.springframework.stereotype.Repository;
+
 /**
  * @author Eduardo Maino
  *
@@ -7,6 +9,7 @@ package com.latitude.emaino.stockprice.repository.stock;
  *         representing yesterday's data. A real implementation would fetch the
  *         data from where it is stored.
  */
+@Repository
 public class YesterdayStockPricesRepositoryImpl implements YesterdayStockPricesRepository {
 
 	/*

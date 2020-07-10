@@ -10,6 +10,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>5.2.7.RELEASE</spring.version>
 		<logback.version>1.2.3</logback.version>
 		<junit-jupiter.version>5.7.0-M1</junit-jupiter.version>
 		<junit-jupiter.version>5.7.0-M1</junit-jupiter.version>
@@ -19,6 +20,12 @@
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>ch.qos.logback</groupId>

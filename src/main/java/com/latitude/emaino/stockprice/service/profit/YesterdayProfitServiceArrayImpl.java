@@ -1,5 +1,8 @@
 package com.latitude.emaino.stockprice.service.profit;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.latitude.emaino.stockprice.repository.stock.YesterdayStockPricesRepository;
 
 /**
@@ -8,10 +11,12 @@ import com.latitude.emaino.stockprice.repository.stock.YesterdayStockPricesRepos
  *         Implementation of the {@link YesterdayProfitService} using an array
  *         iteration strategy.
  */
+@Service
 public class YesterdayProfitServiceArrayImpl implements YesterdayProfitService {
 
 	private final YesterdayStockPricesRepository yesterdayStockRepo;
 
+	@Autowired
 	public YesterdayProfitServiceArrayImpl(final YesterdayStockPricesRepository yesterdayStockRepo) {
 		super();
 		this.yesterdayStockRepo = yesterdayStockRepo;
