@@ -11,6 +11,10 @@ import org.springframework.stereotype.Component;
 
 import com.latitude.emaino.stockprice.service.profit.YesterdayProfitService;
 
+/**
+ * Responsible for displaying a simple console after the application context is
+ * initialized.
+ */
 @Component
 public class ApplicationConsole implements ApplicationListener<ContextRefreshedEvent> {
 
@@ -21,6 +25,9 @@ public class ApplicationConsole implements ApplicationListener<ContextRefreshedE
 	@Autowired
 	private YesterdayProfitService profitServiceArrayStrategy;
 
+	/**
+	 * Generates a feedback message based on the max profit calculated.
+	 */
 	private String getFeedbackMessage(final int maxProfit) {
 
 		String message;
@@ -41,6 +48,9 @@ public class ApplicationConsole implements ApplicationListener<ContextRefreshedE
 		return message;
 	}
 
+	/**
+	 * Runs the console after the ContextRefreshEvent gets triggered.
+	 */
 	@Override
 	public void onApplicationEvent(final ContextRefreshedEvent event) {
 
